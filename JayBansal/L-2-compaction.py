@@ -1,12 +1,6 @@
 # Input: |0|3|2|5|0|0|1|2|0
 # Output: |0|0|0|0|3|2|5|1|2
 
-def swap(a, b):
-    temp = a
-    a = b
-    b = temp
-
-
 arr = list(map(int, input().split()))
 nz = len(arr)
 t = nz - 1
