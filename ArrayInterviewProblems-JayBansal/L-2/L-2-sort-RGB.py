@@ -5,10 +5,12 @@ s = list(map(str, input().split()))
 len_ = len(s)
 
 ########## APPROACH 1 ##########
+# Using in-built sort or sorted function
 for i in sorted(s):
     print(i, end=" ")
 
 ########## APPROACH 2 ##########
+# Using counting sort
 r = 0
 g = 0
 b = 0
@@ -37,3 +39,23 @@ while r and i < len_:
 
 for i in s:
     print(i, end=" ")
+
+# Now, interviewer says, solve it using only one pass and no auxiliary space
+########## APPROACH 3 ##########
+# r = len_
+# b = -1
+# i = 0
+# while i < r:
+#     if s[i] == 'B':
+#         b += 1
+#         s[i], s[b] = s[b], s[i]
+#         i+=1
+#     elif s[i] == 'R':
+#         r -= 1
+#         s[i], s[r] = s[r], s[i]
+#         i+=1
+#     elif s[i] == 'G': 
+#         i+=1
+
+# for i in s:
+#     print(i, end=" ")
